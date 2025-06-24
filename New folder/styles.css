@@ -1,0 +1,86 @@
+* {margin:0; padding:0; box-sizing:border-box;}
+body {background: linear-gradient(-45deg, #797575, #24c0f0cb, #5f5c5c, #00f1dd);
+  background-size: 400% 400%;
+  animation: flowGradient 15s ease infinite; 
+    color:#333; font-family: sans-serif;}
+header {background:#ccc;
+     padding:1rem;}
+.navbar {display:flex; 
+    align-items:center; 
+    justify-content:space-between;}
+.logo {font-size:1.5rem;
+     font-weight:bold;}
+.nav-links {list-style:none; 
+    display:flex; gap:1rem;}
+.nav-links a {text-decoration:none; 
+    color:#333; 
+    font-weight:500;}
+.nav-links a:hover {color:#007BFF;}
+#search-form {display:flex;}
+#search-bar {padding:0.4rem; 
+    border:1px solid #999; 
+    border-radius:4px 0 0 4px;}
+#search-form button {padding:0.4rem 0.8rem; 
+    border:none; background:#007BFF; 
+    color:white; border-radius:0 4px 4px 0; 
+    cursor:pointer;}
+main {padding:1rem; 
+    display:grid; 
+    grid-template-columns:repeat(auto-fill, minmax(200px,1fr)); 
+    gap:1rem;}
+.pagination {
+  margin: 1rem;
+  text-align: center;
+}
+.pagination button {
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
+  cursor: pointer;
+}
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+.movies-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px,1fr));
+  gap: 1rem;
+  padding: 0.5rem;
+}
+.movie {
+  background:#fff;
+  border-radius:6px;
+  overflow:hidden;
+  box-shadow:0 2px 4px rgba(0,0,0,0.1);
+  text-align:center;
+  font-size:.9rem;
+}
+.movie img { width:100%; height:auto; }
+.movie-info { padding:0.4rem; display:flex; justify-content:space-between; align-items:center; }
+.movie {background:white; 
+    border-radius:6px; 
+    overflow:hidden; 
+    box-shadow:0 2px 5px rgba(0,0,0,0.1); 
+    transition:transform .2s;}
+.movie:hover {transform:translateY(-4px);}
+.movie img {width:100%; height:auto;}
+.movie-info {padding:.5rem; 
+    display:flex; 
+    justify-content:space-between; 
+    align-items:center;}
+.movie-info .green {color:green;} 
+.orange {color:orange;} .red {color:red;}
+.overview {padding:.5rem; font-size:.9rem; color:#555;}
+footer {text-align:center; padding:1rem; background:#ccc; margin-top:1rem;}
+
+@keyframes flowGradient {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+@media (max-width:600px){
+  .navbar {flex-direction:column; gap:.5rem;}
+  #search-form {width:100%;}
+  main {grid-template-columns:repeat(auto-fill, minmax(150px,1fr));}
+}
+

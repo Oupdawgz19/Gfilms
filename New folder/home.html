@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Home – GFilms</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">🎬 GFilms</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="upcoming.html">Upcoming Films</a></li>
+        <li><a href="kids.html">Kids Movies</a></li>
+        <li><a href="classic.html">Golden Era</a></li>
+        <li><a href="anime.html">Anime</a></li>
+      </ul>
+      <form id="search-form">
+        <input type="text" id="search-bar" placeholder="Search movies..." />
+        <button type="submit">Search</button>
+      </form>
+    </nav>
+  </header>
+
+  <main id="content">
+    <section id="random-upcoming"><h2>Random Upcoming</h2><div class="movies-row"></div></section>
+    <section id="random-kids"><h2>Random Kids</h2><div class="movies-row"></div></section>
+    <section id="random-classic"><h2>Random Golden Era</h2><div class="movies-row"></div></section>
+    <section id="random-anime"><h2>Random Anime</h2><div class="movies-row"></div></section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 GFilms</p>
+  </footer>
+
+  <script src="script-home.js" defer></script>
+</body>
+</html>
