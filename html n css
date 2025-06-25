@@ -1,0 +1,38 @@
+ class="container">
+    <h1>Movie Recommender</h1>
+    <form method="post">
+      <input type="text" name="query" placeholder="Enter a movie title..." value="{{ query }}" required>
+      <button type="submit">Get Recommendations</button>
+    </form>
+    {% if recommendations %}
+      <h2>Recommended Movies:</h2>
+      <ul>
+        {% for movie in recommendations %}
+          <li>{{ movie }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  </div>
+  
+.container {
+  background: #2c2c2c;
+  padding: 2em;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+input {
+  padding: 0.5em;
+  font-size: 1em;
+  width: 250px;
+}
+
+button {
+  padding: 0.5em 1em;
+  background: crimson;
+  color: white;
+  border: none;
+  font-weight: bold;
+  margin-left: 10px;
+  cursor: pointer;
+}
